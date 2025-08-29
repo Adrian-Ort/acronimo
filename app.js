@@ -1,4 +1,4 @@
-// Mapa de datos curiosos
+
 const DATOS = {
   americano: "Los Steelers son uno de los equipos más históricos y exitosos de la NFL, conocidos por sus seis victorias de Super Bowl, su icónico logo de Steelmark en un solo casco y su legendaria defensa Cortina de Acero de los 70.",
   darius: "Darius es el hermano mayor del campeón Draven y creció huérfano junto a él en la ciudad portuaria de Basilich, luchando para sobrevivir. También tiene una hija llamada Invetia.",
@@ -16,6 +16,20 @@ document.addEventListener("click", (e) => {
   const key = btn.dataset.key;     // lee el data-key del botón
   const dato = DATOS[key];         // busca el dato curioso
   if (dato) {
-    alert(dato);
+    showCustomAlert(dato);
   }
 });
+
+// ===== Función de alert personalizado =====
+function showCustomAlert(message) {
+  const alertBox = document.getElementById("acriAlert");
+  const text = document.getElementById("acriAlertText");
+  const closeBtn = document.getElementById("acriAlertClose");
+  text.textContent = message;
+  alertBox.setAttribute("aria-hidden", "false");
+  function close() {
+    alertBox.setAttribute("aria-hidden", "true");
+    closeBtn.removeEventListener("click", close);
+  }
+  closeBtn.addEventListener("click", close);
+}

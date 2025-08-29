@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acrónimo: ADRIAN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/src/css/styles.css">
-    <link rel="stylesheet" href="/src/css/normalize.css">
     <script src="app.js" defer></script>
 </head>
 
@@ -25,8 +29,7 @@
                     <span class="acri-letter">A</span>
                     <span class="acri-meaning">para Americano</span>
                 </div>
-                <img src="src/img/steelers.jpg"
-                    alt="Fútbol Americano" class="acri-thumb" loading="lazy" />
+                <img src="src/img/steelers.jpg" alt="Fútbol Americano" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="americano">Dato curioso</button>
             </article>
 
@@ -36,8 +39,7 @@
                     <span class="acri-letter">D</span>
                     <span class="acri-meaning">para Darius</span>
                 </div>
-                <img src="src/img/Darius.jpg" alt="Darius"
-                    class="acri-thumb" loading="lazy" />
+                <img src="src/img/Darius.jpg" alt="Darius" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="darius">Dato curioso</button>
             </article>
 
@@ -47,8 +49,7 @@
                     <span class="acri-letter">R</span>
                     <span class="acri-meaning">para Rammstein</span>
                 </div>
-                <img src="src/img/rammstein.jpg" alt="Rammstein"
-                    class="acri-thumb" loading="lazy" />
+                <img src="src/img/rammstein.jpg" alt="Rammstein" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="rammstein">Dato curioso</button>
             </article>
 
@@ -58,8 +59,7 @@
                     <span class="acri-letter">I</span>
                     <span class="acri-meaning">para Izuku Midoriya</span>
                 </div>
-                <img src="src/img/izuku.jpg" alt="Izuku Midoriya"
-                    class="acri-thumb" loading="lazy" />
+                <img src="src/img/izuku.jpg" alt="Izuku Midoriya" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="izuku">Dato curioso</button>
             </article>
 
@@ -69,8 +69,7 @@
                     <span class="acri-letter">A</span>
                     <span class="acri-meaning">para Alemania</span>
                 </div>
-                <img src="src/img/alemania.jpg"
-                    alt="Alemania" class="acri-thumb" loading="lazy" />
+                <img src="src/img/alemania.jpg" alt="Alemania" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="alemania">Dato curioso</button>
             </article>
 
@@ -80,8 +79,7 @@
                     <span class="acri-letter">N</span>
                     <span class="acri-meaning">para Nico Robin</span>
                 </div>
-                <img src="src/img/nico.jpg" alt="Nico Robin"
-                    class="acri-thumb" loading="lazy" />
+                <img src="src/img/nico.jpg" alt="Nico Robin" class="acri-thumb" loading="lazy" />
                 <button class="acri-btn fact-btn" data-key="nico">Dato curioso</button>
             </article>
         </div>
@@ -91,6 +89,12 @@
         </footer>
     </section>
 
+    <div id="acriAlert" class="acri-alert" aria-hidden="true">
+        <div class="acri-alert__box">
+            <p id="acriAlertText"></p>
+            <button id="acriAlertClose" class="acri-alert__close">Cerrar</button>
+        </div>
+    </div>
 
 </body>
 

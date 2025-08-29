@@ -1,25 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(
-    to bottom right,   
-    #003459,                 
-    #007ea7 50%
-    );                 
+
+body {
+  background: linear-gradient(to bottom right,
+      #003459,
+      #007ea7 ,
+      #5bd5ff );
 }
 
-/* ====== ACRÓNIMO ADRIAN (bloque aislado) ====== */
-.acri-wrap {
+:root {
+  --font-ubuntu: "Ubuntu", sans-serif;
+
+  --ubuntu-w-light: 300;
+  --ubuntu-w-regular: 400;
+  --ubuntu-w-medium: 500;
+  --ubuntu-w-bold: 700;
+
   --bg: #f5f7fb;
   --card: #ffffff;
   --text: #00171f;
   --muted: #00171f;
   --accent: #007ea7;
   --accent-600: #003459;
+}
+
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-ubuntu);
+  font-weight: var(--ubuntu-w-bold);
+} 
+
+p, button, span{
+  font-family: var(--font-ubuntu);
+  font-weight: var(--ubuntu-w-regular);
+}
+small {
+  font-family: var(--font-ubuntu);
+  font-weight: var(--ubuntu-w-light);
+}
+/* ====== ACRÓNIMO ADRIAN (bloque aislado) ====== */
+.acri-wrap {
+
   --shadow: 0 8px 20px rgba(2, 6, 23, 0.08);
   --radius: 14px;
 
@@ -33,16 +58,18 @@ body{
   text-align: center;
   margin-bottom: 1.25rem;
 }
+
 .acri-header h2 {
   font-size: 1.75rem;
   margin-bottom: .25rem;
 }
+
 .acri-header p {
   color: var(--muted);
 }
 
 .acri-list {
-  max-width: 920px;
+  max-width: 50%;
   margin: 0 auto;
   display: grid;
   gap: 16px;
@@ -59,6 +86,7 @@ body{
   box-shadow: var(--shadow);
   transition: transform .2s ease, box-shadow .2s ease;
 }
+
 .acri-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(2, 6, 23, 0.12);
@@ -69,10 +97,12 @@ body{
   align-items: baseline;
   gap: 12px;
 }
+
 .acri-letter {
   font-weight: 900;
   font-size: 48px;
 }
+
 .acri-meaning {
   font-weight: 700;
   color: #007ea7;
@@ -83,7 +113,7 @@ body{
   height: 110px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
 }
 
 .acri-btn {
@@ -96,11 +126,77 @@ body{
   cursor: pointer;
   transition: background .2s ease, transform .05s ease;
 }
-.acri-btn:hover { background: var(--accent-600); }
-.acri-btn:active { transform: translateY(1px); }
+
+.acri-btn:hover {
+  background: var(--accent-600);
+}
+
+.acri-btn:active {
+  transform: translateY(1px);
+}
 
 .acri-footer {
   text-align: center;
   color: var(--muted);
   margin-top: 1rem;
+}
+
+/* ===== Alert personalizado ===== */
+.acri-alert {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+
+.acri-alert[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.acri-alert__box {
+  background: #003459;
+  color: #fff;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  max-width: 420px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  text-align: center;
+  animation: pop .25s ease-out;
+}
+
+.acri-alert__box p {
+  margin-bottom: 1rem;
+}
+
+.acri-alert__close {
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.acri-alert__close:hover {
+  background: #00a4d6;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
