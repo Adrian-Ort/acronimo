@@ -72,14 +72,14 @@ small {
   max-width: 50%;
   margin: 0 auto;
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
 .acri-card {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   padding: 18px;
   border-radius: var(--radius);
   background: var(--card);
