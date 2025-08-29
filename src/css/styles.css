@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(
+    to bottom right,   
+    #003459,                 
+    #007ea7 50%
+    );                 
+}
+
+/* ====== ACRÓNIMO ADRIAN (bloque aislado) ====== */
+.acri-wrap {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #00171f;
+  --muted: #00171f;
+  --accent: #007ea7;
+  --accent-600: #003459;
+  --shadow: 0 8px 20px rgba(2, 6, 23, 0.08);
+  --radius: 14px;
+
+  color: var(--text);
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+  background: transparent;
+}
+
+.acri-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.acri-header h2 {
+  font-size: 1.75rem;
+  margin-bottom: .25rem;
+}
+.acri-header p {
+  color: var(--muted);
+}
+
+.acri-list {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.acri-card {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.acri-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.12);
+}
+
+.acri-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.acri-letter {
+  font-weight: 900;
+  font-size: 48px;
+}
+.acri-meaning {
+  font-weight: 700;
+  color: #007ea7;
+}
+
+.acri-thumb {
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+}
+
+.acri-btn {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease, transform .05s ease;
+}
+.acri-btn:hover { background: var(--accent-600); }
+.acri-btn:active { transform: translateY(1px); }
+
+.acri-footer {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 1rem;
+}
